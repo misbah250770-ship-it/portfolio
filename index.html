@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Supaya website menyesuaikan ukuran HP dan laptop -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portfolio | Misbah Huddin</title>
@@ -13,8 +12,6 @@
 
         /* ==================================================
            1. PENGATURAN WARNA
-           Kalau ingin mengganti warna website,
-           cukup ubah bagian ini.
         ================================================== */
 
         :root {
@@ -26,7 +23,6 @@
             --accent: #6c63ff;
         }
 
-        /* Warna ketika Dark Mode aktif */
         body.dark {
             --background: #0d0d0f;
             --card: #17171a;
@@ -159,7 +155,7 @@
 
 
         /* ==================================================
-           4. HERO / HALAMAN DEPAN
+           4. HERO / HOME
         ================================================== */
 
         .hero {
@@ -207,6 +203,14 @@
 
             color: var(--text-light);
 
+            margin-bottom: 5px;
+        }
+
+        .university {
+            color: var(--text-light);
+
+            font-size: 16px;
+
             margin-bottom: 20px;
         }
 
@@ -221,7 +225,9 @@
         }
 
 
-        /* Tombol */
+        /* ==================================================
+           5. TOMBOL
+        ================================================== */
 
         .buttons {
             display: flex;
@@ -232,6 +238,8 @@
         }
 
         .button {
+            display: inline-block;
+
             padding: 13px 22px;
 
             border-radius: 12px;
@@ -239,6 +247,8 @@
             border: 1px solid var(--border);
 
             transition: 0.3s;
+
+            cursor: pointer;
         }
 
         .button-main {
@@ -255,7 +265,7 @@
 
 
         /* ==================================================
-           5. FOTO PROFIL
+           6. FOTO PROFIL
         ================================================== */
 
         .photo-area {
@@ -298,7 +308,7 @@
 
 
         /* ==================================================
-           6. SECTION
+           7. SECTION
         ================================================== */
 
         section {
@@ -325,7 +335,7 @@
 
 
         /* ==================================================
-           7. ABOUT
+           8. ABOUT
         ================================================== */
 
         .about {
@@ -352,7 +362,7 @@
 
 
         /* ==================================================
-           8. SKILLS
+           9. SKILLS
         ================================================== */
 
         .skills {
@@ -417,7 +427,7 @@
 
 
         /* ==================================================
-           9. CURRENTLY LEARNING
+           10. CURRENTLY LEARNING
         ================================================== */
 
         .learning-box {
@@ -458,682 +468,31 @@
 
 
         /* ==================================================
-           10. CONTACT
+           11. PROJECTS
         ================================================== */
 
-        .contact-box {
+        .projects {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .project-card {
             background: var(--card);
 
             border: 1px solid var(--border);
 
-            border-radius: 30px;
+            border-radius: 24px;
 
-            padding: 60px;
+            padding: 30px;
 
-            text-align: center;
-
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            transition: 0.4s;
         }
 
-        .contact-box h2 {
-            font-size: 55px;
-
-            letter-spacing: -3px;
-
-            margin-bottom: 15px;
-        }
-
-        .contact-box p {
-            color: var(--text-light);
-
-            margin-bottom: 30px;
-        }
-
-        .contact-links {
-            display: flex;
-
-            justify-content: center;
-
-            flex-wrap: wrap;
-
-            gap: 12px;
-        }
-
-        .contact-link {
-            padding: 13px 20px;
-
-            border: 1px solid var(--border);
-
-            border-radius: 12px;
-
-            transition: 0.3s;
-        }
-
-        .contact-link:hover {
-            background: var(--accent);
-
-            color: white;
+        .project-card:hover {
+            transform: translateY(-7px);
 
             border-color: var(--accent);
-
-            transform: translateY(-4px);
         }
-
-
-        /* ==================================================
-           11. FOOTER
-        ================================================== */
-
-        footer {
-            padding: 35px 0;
-
-            border-top: 1px solid var(--border);
-
-            text-align: center;
-
-            color: var(--text-light);
-
-            font-size: 13px;
-        }
-
-
-        /* ==================================================
-           12. ANIMASI
-        ================================================== */
-
-        .fade {
-            animation: fadeUp 0.9s ease;
-        }
-
-        @keyframes fadeUp {
-
-            from {
-                opacity: 0;
-
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-
-                transform: translateY(0);
-            }
-
-        }
-
-
-        /* ==================================================
-           13. TAMPILAN HP
-        ================================================== */
-
-        @media (max-width: 850px) {
-
-            .nav-menu {
-                display: none;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-
-                text-align: center;
-
-                padding-top: 140px;
-            }
-
-            .hero-description {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .buttons {
-                justify-content: center;
-            }
-
-            .photo-area {
-                order: -1;
-            }
-
-            .photo-box {
-                width: 280px;
-                height: 350px;
-            }
-
-            .hero h1 {
-                font-size: 55px;
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-
-                gap: 30px;
-            }
-
-            .skills {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 43px;
-            }
-
-            .contact-box {
-                padding: 40px 20px;
-            }
-
-            .contact-box h2 {
-                font-size: 42px;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-
-<body>
-
-
-    <!-- ==================================================
-         NAVBAR
-    ================================================== -->
-
-    <nav class="navbar">
-
-        <div class="logo">
-            MH.
-        </div>
-
-        <ul class="nav-menu">
-
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
-        </ul>
-
-
-        <!-- Tombol untuk mengganti Light / Dark Mode -->
-
-        <button
-            class="theme-button"
-            id="themeButton">
-
-            ☾
-
-        </button>
-
-    </nav>
-
-
-
-    <!-- ==================================================
-         HOME
-    ================================================== -->
-
-    <section id="home">
-
-        <div class="container hero">
-
-
-            <div class="hero-content fade">
-
-                <p class="hero-small">
-                    WELCOME TO MY PORTFOLIO
-                </p>
-
-                <h1>
-                    Misbah
-                    <span>Huddin.</span>
-                </h1>
-
-                <h2>
-                    Mahasiswa S1 Teknik Informatika
-                </h2>
-
-                <p>Universitas Jabal Ghafur</p>
-
-                <p class="hero-description">
-
-                    Saya sedang mempelajari pengembangan
-                    website, pemrograman, dan teknologi
-                    informasi untuk mengembangkan kemampuan
-                    saya di bidang teknologi.
-
-                </p>
-
-
-                <div class="buttons">
-
-                    <a
-                        href="#about"
-                        class="button button-main">
-
-                        Tentang Saya
-
-                    </a>
-
-                    <a
-                        href="#contact"
-                        class="button">
-
-                        Hubungi Saya
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- FOTO -->
-
-            <div class="photo-area fade">
-
-                <div class="photo-box">
-
-                    <img
-                        src="images/profile.jpg"
-                        alt="Foto Profil Misbah Huddin">
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         ABOUT
-    ================================================== -->
-
-    <section id="about">
-
-        <div class="container">
-
-            <p class="section-number">
-                01 — ABOUT
-            </p>
-
-            <h2 class="section-title">
-                Tentang Saya
-            </h2>
-
-
-            <div class="about">
-
-                <div class="about-big">
-
-                    Saya sedang membangun
-                    kemampuan saya di dunia
-                    teknologi.
-
-                </div>
-
-
-                <div class="about-text">
-
-                    <p>
-
-                        Saya adalah mahasiswa Teknik Informatika
-                        yang memiliki ketertarikan terhadap
-                        teknologi dan pengembangan website.
-
-                    </p>
-
-                    <br>
-
-                    <p>
-
-                        Saat ini saya sedang mempelajari
-                        HTML, CSS, JavaScript, PHP, dan MySQL
-                        melalui pembelajaran dan tugas
-                        perkuliahan.
-
-                    </p>
-
-                    <br>
-
-                    <p>
-
-                        Website portfolio ini dibuat sebagai
-                        media untuk memperkenalkan diri,
-                        kemampuan, serta proses belajar saya
-                        di bidang teknologi informasi.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         SKILLS
-    ================================================== -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <p class="section-number">
-                02 — SKILLS
-            </p>
-
-            <h2 class="section-title">
-                Kemampuan
-            </h2>
-
-
-            <div class="skills">
-
-
-                <!-- HTML -->
-
-                <div class="skill-card">
-
-                    <h3>HTML</h3>
-
-                    <p>
-                        Currently Learning
-                    </p>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-progress"
-                            style="width: 65%;">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CSS -->
-
-                <div class="skill-card">
-
-                    <h3>CSS</h3>
-
-                    <p>
-                        Currently Learning
-                    </p>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-progress"
-                            style="width: 55%;">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- JAVASCRIPT -->
-
-                <div class="skill-card">
-
-                    <h3>JavaScript</h3>
-
-                    <p>
-                        Currently Learning
-                    </p>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-progress"
-                            style="width: 35%;">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PHP -->
-
-                <div class="skill-card">
-
-                    <h3>PHP</h3>
-
-                    <p>
-                        Currently Learning
-                    </p>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-progress"
-                            style="width: 30%;">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MYSQL -->
-
-                <div class="skill-card">
-
-                    <h3>MySQL</h3>
-
-                    <p>
-                        Currently Learning
-                    </p>
-
-                    <div class="skill-bar">
-
-                        <div
-                            class="skill-progress"
-                            style="width: 30%;">
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- CURRENTLY LEARNING -->
-
-            <div class="learning-box">
-
-                <h3>
-                    Currently Learning
-                </h3>
-
-                <div class="learning-list">
-
-                    <span class="learning-item">
-                        JavaScript
-                    </span>
-
-                    <span class="learning-item">
-                        PHP
-                    </span>
-
-                    <span class="learning-item">
-                        MySQL
-                    </span>
-
-                    <span class="learning-item">
-                        Web Development
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         CONTACT
-    ================================================== -->
-
-    <section id="contact">
-
-        <div class="container">
-
-            <div class="contact-box">
-
-                <p class="section-number">
-                    03 — CONTACT
-                </p>
-
-                <h2>
-                    Let's Connect.
-                </h2>
-
-                <p>
-                    Silakan hubungi saya melalui platform berikut.
-                </p>
-
-
-                <div class="contact-links">
-
-
-                    <!-- EMAIL -->
-
-                    <a
-                        href="mailto:misbah250770@gmail.com"
-                        class="contact-link">
-
-                        Email
-
-                    </a>
-
-
-                    <!-- GITHUB -->
-
-                    <a
-                        href="https://github.com/misbah250770-ship-it
-                        " target="_blank"
-                        class="contact-link">
-
-                        GitHub
-
-                    </a>
-
-
-                    <!-- INSTAGRAM -->
-
-                    <a
-                        href="https://instagram.com/bahhh19_"
-                        target="_blank"
-                        class="contact-link">
-
-                        Instagram
-
-                    </a>
-
-
-                    <!-- WHATSAPP -->
-
-                    <a
-                        href="https://wa.me/6283853189299"
-                        target="_blank"
-                        class="contact-link">
-
-                        WhatsApp
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ==================================================
-         FOOTER
-    ================================================== -->
-
-    <footer>
-
-        <div class="container">
-
-            © 2026 Misbah Huddin · Portfolio
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- ==================================================
-         DARK / LIGHT MODE
-    ================================================== -->
-
-    <script>
-
-        /* Mengambil tombol Dark Mode */
-
-        const themeButton =
-            document.getElementById("themeButton");
-
-
-        /* Ketika tombol ditekan */
-
-        themeButton.addEventListener("click", function () {
-
-
-            /* Menambahkan atau menghapus class "dark" */
-
-            document.body.classList.toggle("dark");
-
-
-            /* Mengubah icon tombol */
-
-            if (document.body.classList.contains("dark")) {
-
-                themeButton.textContent = "☀";
-
-            } else {
-
-                themeButton.textContent = "☾";
-
-            }
-
-        });
-
-    </script>
-
-
-</body>
-
-</html>
