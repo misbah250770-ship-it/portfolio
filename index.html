@@ -589,6 +589,153 @@
             font-size: 13px;
         }
 
+/* 11. PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.project-card h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.project-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        height: 220px;
+    }
+
+    .project-card h3 {
+        font-size: 23px;
+    }
+}
+
+/* 11. PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.project-card h3 {
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.project-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .project-image {
+        height: 220px;
+    }
+
+    .project-card h3 {
+        font-size: 23px;
+    }
+}
 
         /* ==================================================
            12. CONTACT
@@ -910,6 +1057,7 @@
                 </a>
             </li>
 
+            <li><a href="#projects">Projects</a></li>
 
             <li>
                 <a href="#contact">
@@ -1382,7 +1530,50 @@
 
         </section>
 
+        
 
+<!-- PROJECTS -->
+<section id="projects">
+
+    <div class="section-number">04 — PROJECTS</div>
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+
+            <img 
+                src="images/absensi-santri.png" 
+                alt="Screenshot Absensi Santri Digital"
+                class="project-image"
+            >
+
+            <h3>Absensi Santri Digital</h3>
+
+            <p>
+                Sistem informasi absensi santri berbasis web yang dibuat
+                untuk membantu pencatatan dan pengelolaan kehadiran santri
+                secara digital dengan lebih mudah dan terstruktur.
+            </p>
+
+            <div class="project-tech">
+                HTML • CSS • JavaScript • PHP • MySQL
+            </div>
+
+            <a 
+                href="https://absensi-santri.freedev.app" 
+                target="_blank"
+                class="project-button"
+            >
+                LIHAT PROYEK
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
         <!-- ==================================================
              CONTACT
