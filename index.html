@@ -462,6 +462,34 @@
             line-height: 1.9;
         }
 
+        /* FOTO ABOUT */
+.about-big {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-photo {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+    .about-photo {
+        width: 100%;
+        max-width: 300px;
+        height: 370px;
+    }
+
+    .about-big {
+        justify-content: center;
+    }
+}
+
 
         /* ==================================================
            10. SKILLS
@@ -1273,10 +1301,11 @@
 
                 <div class="about-big">
 
-                    Belajar teknologi.
-                    Membangun kemampuan.
-                    Terus berkembang.
-
+                    <img 
+    src="images/about.jpeg"
+    alt="Foto Misbah Huddin"
+    class="about-photo"
+>
                 </div>
 
 
